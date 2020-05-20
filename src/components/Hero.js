@@ -52,6 +52,7 @@ position: relative;
   .social-link {
     font-size: 3rem;
   }
+}
 `;
 
 export default Hero
