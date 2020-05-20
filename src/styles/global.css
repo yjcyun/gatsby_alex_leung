@@ -1,7 +1,7 @@
 /*=============== 
 Fonts
 ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&family=Playfair+Display:wght@500&display=swap");
 
 /*=============== 
 Variables
@@ -9,6 +9,7 @@ Variables
 :root {
   --ff-primary: "Raleway", sans-serif;
   --ff-secondary: "Quicksand", sans-serif;
+  --ff-title: "Playfair Display", serif;
   --transition: all 0.2s linear;
   --max-width: 1170px;
   --fixed-width: 700px;
@@ -87,23 +88,23 @@ h4 {
 }
 
 /* section */
- .section-center {
-    width: 90vw;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
+.section-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
 
-  @media screen and (min-width: 992px) {
-    .section-center {
-      width: 95vw;
-    }
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 70vw;
   }
+}
 
 /* social links */
 .social-links {
   margin-top: 2rem;
   width: 8rem;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 .social-link {
@@ -113,4 +114,17 @@ h4 {
 }
 .social-link:hover {
   color: var(--clr-hover);
-} 
+}
+
+
+/*
+===============
+Pages
+===============
+*/
+.blog-page,
+.error-page,
+.about-page,
+.contact-page {
+  min-height: calc(100vh - 5rem - 9rem);
+}
