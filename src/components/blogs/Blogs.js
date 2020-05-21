@@ -20,14 +20,13 @@ padding: 5rem 0;
 h2{
   text-align:center;
   margin-bottom:3rem;
+  font-family: var(--ff-title);
 }
   @media (min-width: 576px) {
     .blogs-center {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       column-gap: 2rem;
-      row-gap: 2rem;
-      grid-auto-rows: 2fr;
     }
 
     .section-center{

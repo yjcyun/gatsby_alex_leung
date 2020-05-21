@@ -127,7 +127,18 @@ h4 {
     color:var(--clr-blueGrey);
   }
 
-
+/* button */
+.btn{
+  outline: 1px solid black;
+  padding: 0.7rem 1.5rem;
+  background: black;
+  transition: var(--transition);
+  color: white;
+}
+.btn:hover {
+  background: white;
+  color: black;
+}
 
 /*
 ===============

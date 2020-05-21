@@ -4,7 +4,7 @@ import { BsDot } from 'react-icons/bs';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
-const SingleBlog = ({ title, id, image, date, category, slug, desc }) => {
+const SingleBlog = ({ title, id, image, date, category, slug }) => {
   return (
     <BlogWrapper>
       <Link to={`blogs/${slug}`} key={id} className="blog">
@@ -18,7 +18,6 @@ const SingleBlog = ({ title, id, image, date, category, slug, desc }) => {
             </div>
             <div className="blog-text">
               <h4>{title}</h4>
-              <p>{desc}</p>
             </div>
           </div>
         </article>
@@ -56,7 +55,7 @@ const BlogWrapper = styled.section`
   }
 
   .blog-img{
-    height: 15rem;
+    height: 20rem;
   }
 
   .blog-header {
@@ -76,18 +75,9 @@ const BlogWrapper = styled.section`
     text-transform: uppercase
   }
   @media (min-width: 576px) {
-    .blog-img {
-      height: 17.5rem;
-    }
     .blog-card{
       padding-bottom: 0;
     } 
-  }
-
-  @media (min-width: 850px) {
-    .blog-img {
-      height: 13.75rem;
-    }
   }
 `;
 
