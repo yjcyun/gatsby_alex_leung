@@ -16,6 +16,7 @@ Variables
   --clr-white: #fff;
   --clr-black: #2f3640;
   --clr-hover: #718093;
+  --clr-blueGrey: hsl(209, 34%, 30%);
 }
 
 /*=============== 
@@ -123,7 +124,7 @@ h4 {
   }
   .subtitle {
     font-size: 2.5rem;
-    color:#AB5232;
+    color:var(--clr-blueGrey);
   }
 
 

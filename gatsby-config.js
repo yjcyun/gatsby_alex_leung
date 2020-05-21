@@ -13,7 +13,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`experiences`],
+        contentTypes: [`experiences`, `blogs`],
         //If using single types place them in this array.
         singleTypes: [`about`]
       }
