@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {
   plugins: [
     {
@@ -21,3 +22,15 @@ module.exports = {
     `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
   ],
 }
+=======
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
+module.exports = {
+  /* Your site config here */
+  plugins: [],
+}
+>>>>>>> cd92e220788601fe353669ad9d8f47d49b9ac86b

@@ -1,0 +1,53 @@
+[33mcommit a393cdb1f5738b3020273b44d22f96e1a34af4ee[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 23:36:56 2020 -0400
+
+    timeline
+
+[33mcommit 7f960777e89adf6fd04cc96c7e6fb75d7300f6c5[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 21:53:01 2020 -0400
+
+    changed Experience to Timeline
+
+[33mcommit a9db2fed9ad4d0b9405918f165efabf4a6acd817[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 19:54:53 2020 -0400
+
+    separated biograph into a seaparte component
+
+[33mcommit 06326a0229d1be4cd60d749c14ec6acb34f7db84[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 19:36:16 2020 -0400
+
+    about page biograph
+
+[33mcommit 9ec3135257e06b4511688f869390e56d803bc0f4[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 17:26:29 2020 -0400
+
+    before animation
+
+[33mcommit 33c3ba83a5ac4b7e6bb10b8c15862b0ce1ef6b36[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 16:12:07 2020 -0400
+
+    hero component
+
+[33mcommit fed1c5d2dd1f3ae2db1b24c91ee1388683136e12[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 15:02:52 2020 -0400
+
+    navbar component
+
+[33mcommit cb7ed4728605ed5cf0241e0112735448f1b629d1[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 14:29:18 2020 -0400
+
+    boiler plate & global css
+
+[33mcommit 13fc516df71b93be7a71913508a55aec027c28c0[m
+Author: Yujeong Christina Yun <yjc.yun@gmail.com>
+Date:   Wed May 20 11:26:46 2020 -0400
+
+    Initial commit from gatsby: (https://github.com/gatsbyjs/gatsby-starter-hello-world.git)
