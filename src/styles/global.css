@@ -137,6 +137,7 @@ Pages
 .blog-page,
 .error-page,
 .about-page,
-.contact-page {
+.contact-page,
+.blog-template {
   min-height: calc(100vh - 5rem - 9rem);
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { BsDot } from 'react-icons/bs';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
@@ -10,27 +11,35 @@ const SingleBlog = ({ title, id, image, date, category, slug, desc }) => {
         <article>
           <Image fluid={image.childImageSharp.fluid} className="blog-img" alt="blog" />
           <div className="blog-card">
-            <h4>{title}</h4>
-            <div className="blog-footer">
-              <p>{category}</p>
+            <div className="blog-header">
+              <p className="blog-cat">{category}</p>
+              <BsDot />
+              <p>{date}</p>
+            </div>
+            <div className="blog-text">
+              <h4>{title}</h4>
+              <p>{desc}</p>
             </div>
           </div>
         </article>
       </Link>
     </BlogWrapper>
-
   )
 }
 
 const BlogWrapper = styled.section`
   .blog{
-    display: block;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: grid;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
     transition: var(--transition);
+    margin-bottom: 2rem;
+    text-align: center; 
+    position: relative;
   }
 
-  .blog:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  .blog:hover h4{
+    color: rgba(233,33,99,1)
   }
 
   .blog article {
@@ -50,14 +59,34 @@ const BlogWrapper = styled.section`
     height: 15rem;
   }
 
-  .blog-footer {
+  .blog-header {
     display:flex;
     align-items: center;
+    justify-content: center;
     color: grey;
+    font-size: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .blog h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+     transition: var(--transition);
+  }
+  .blog-cat {
+    text-transform: uppercase
   }
   @media (min-width: 576px) {
     .blog-img {
       height: 17.5rem;
+    }
+    .blog-card{
+      padding-bottom: 0;
+    } 
+  }
+
+  @media (min-width: 850px) {
+    .blog-img {
+      height: 13.75rem;
     }
   }
 `;
