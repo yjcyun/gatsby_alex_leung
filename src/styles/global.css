@@ -1,14 +1,14 @@
 /*=============== 
 Fonts
 ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@400;700&family=Playfair+Display:wght@500&display=swap");
 
 /*=============== 
 Variables
 ===============*/
 :root {
-  --ff-primary: "Raleway", sans-serif;
-  --ff-secondary: "Quicksand", sans-serif;
+  --ff-primary: 'Poppins', sans-serif;;
+ 
   --ff-title: "Playfair Display", serif;
   --transition: all 0.2s linear;
   --max-width: 1170px;
@@ -152,3 +152,39 @@ Pages
 .blog-template {
   min-height: calc(100vh - 5rem - 9rem);
 }
+
+/*
+===============
+navlinks
+===============
+*/
+ .nav-links {
+    display: none;
+  }
+
+   @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-links li {
+      margin-right: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--clr-black);
+      font-weight: bold;
+      transition: var(--transition);
+      padding: 0.5rem 0;
+      font-size:1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--clr-hover);
+      box-shadow: 0 2px var(--clr-black);
+    }
+
+  }

@@ -20,7 +20,6 @@ padding: 5rem 0;
 h2{
   text-align:center;
   margin-bottom:3rem;
-  font-family: var(--ff-title);
 }
   @media (min-width: 576px) {
     .blogs-center {

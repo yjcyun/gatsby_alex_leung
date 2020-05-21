@@ -16,30 +16,20 @@ const data = [
     id: 3,
     text: 'blog',
     url: '/blog'
-  },
-  {
-    id: 4,
-    text: 'gallery',
-    url: '/gallery'
-  },
-  {
-    id: 5,
-    text: 'contact',
-    url: '/contact'
   }
 ];
 
 const tempNavLinks = data.map(link => {
   return (
-      <li key={link.id}>
-        <Link to={link.url}>{link.text}</Link>
-      </li>
+    <li key={link.id}>
+      <Link to={link.url}>{link.text}</Link>
+    </li>
   );
 });
 
-export default({styleClass})=>{
-  return(
-    <ul className={`nav-links ${styleClass? 'styleClass': ''}`}>
+export default ({ styleClass }) => {
+  return (
+    <ul className={`${styleClass}`}>
       {tempNavLinks}
     </ul>
   )

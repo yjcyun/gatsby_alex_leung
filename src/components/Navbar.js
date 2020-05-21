@@ -1,19 +1,22 @@
 import React from 'react';
-import { FiAlignJustify } from 'react-icons/fi';
+import { Link } from 'gatsby';
+import { FiMenu } from 'react-icons/fi';
 import styled from 'styled-components';
-// import logo from '../assets/logo.png';
 import NavLinks from '../constants/links';
 
-const Navbar = () => {
+const Navbar = ({ toggleNavbar }) => {
   return (
     <NavbarWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          {/* <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link> */}
-          <button type="button" className="toggle-btn">
-            <FiAlignJustify />
+          <Link to="/">
+            <h4 className="logo">Alex Leung</h4>
+          </Link>
+          <button
+            type="button"
+            className="toggle-btn"
+            onClick={toggleNavbar}>
+            <FiMenu />
           </button>
         </div>
         <NavLinks styleClass="nav-links" />
@@ -56,6 +59,7 @@ const NavbarWrapper = styled.nav`
     color: var(--clr-black);
     cursor: pointer;
     transition: var(--transition);
+    margin-top: 0.5rem;
     :focus{
       outline: none;
     }
@@ -65,37 +69,16 @@ const NavbarWrapper = styled.nav`
     color: var(--clr-hover);
   }
 
-  .nav-links {
-    display: none;
+  .logo{
+    font-family: 'Arizonia', cursive;
+    color: var(--clr-black);
+    font-size: 2rem;
   }
 
   @media (min-width: 768px) {
     .toggle-btn {
       display: none;
     }
-
-    .nav-links {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .nav-links li {
-      margin-right: 2rem;
-    }
-
-    .nav-links a {
-      text-transform: capitalize;
-      color: var(--clr-black);
-      font-weight: bold;
-      transition: var(--transition);
-      padding: 0.5rem 0;
-    }
-
-    .nav-links a:hover {
-      color: var(--clr-hover);
-      box-shadow: 0 2px var(--clr-black);
-    }
-
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr;

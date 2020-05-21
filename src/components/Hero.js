@@ -35,11 +35,14 @@ position: relative;
 .hero-info h1 {
   font-weight: bold;
   font-family: var(--ff-primary);
-  text-transform: uppercase;  
+  text-transform: uppercase;
+  font-size: 4rem; 
+  letter-spacing: 0.2rem; 
 }
 
 .hero-info h3 {
   max-width: 30rem;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .hero-info h1 {
