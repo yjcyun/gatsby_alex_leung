@@ -7,7 +7,7 @@ const Timeline = ({ exp }) => {
     <TimelineWrapper className="about-page" >
       <div className="section-center">
         <article>
-          <h2 className="about-title">Timeline</h2>
+          <h2 className="about-title subtitle" style={{textAlign:'center'}}>Timeline</h2>
         </article>
 
         <article className="timeline-container">

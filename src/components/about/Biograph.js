@@ -3,8 +3,8 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 
 const Biograph = (props) => {
-  const {title, image, info} = props.bio[0];
-  
+  const { title, image, info } = props.bio[0];
+
   return (
     <div>
       <AboutWrapper className="about-page">
@@ -19,7 +19,7 @@ const Biograph = (props) => {
                 alt="photo of Alex" />
             </div>
             <div>
-              <h2 className="about-title" style={{ color: '#AB5232' }}>Biograph</h2>
+              <h2 className="about-title subtitle">Biograph</h2>
               <p className="about-info">{info}</p>
             </div>
           </article>
@@ -32,21 +32,16 @@ const Biograph = (props) => {
 const AboutWrapper = styled.section`
 padding: 3rem 0;
 margin-bottom: 5rem;
-  .about-title {
-    font-size: 2.7rem;
-    line-height: 1.3;
-    font-family: var(--ff-title);
-    margin-bottom: 1rem;
-  }
   .about-img {
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+
   .about-info {
     text-align: left;
     line-height:1.8;
   }
-
+  
   @media (min-width: 992px) {
     .about-center{
       display: grid;
