@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TimelineItem from './TimelineItem';
 
 const Timeline = ({ exp }) => {
   return (
@@ -9,30 +10,10 @@ const Timeline = ({ exp }) => {
           <h2 className="about-title">Timeline</h2>
         </article>
 
-        <article>
-          {exp.map((item, index) => {
-            const { id, company, date, position, desc } = item;
-            const even = index % 2;
-            return (
-              <div key={id} className="timeline-info">
-                <ul>
-                  <li>
-                    <div className="time">
-                      <h3>{position}</h3>
-                      {desc.map(i => (
-                        <p key={i.id}>{i.name}</p>
-                      ))}
-                    </div>
-                    <div className="timline-content">
-                      <h4>{company}</h4>
-                      <span>{date}</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            )
-          })}
-
+        <article className="timeline-container">
+          {exp.map((item) => (
+            <TimelineItem data={item} key={item.id} />
+          ))}
         </article>
       </div>
     </TimelineWrapper>
@@ -40,28 +21,22 @@ const Timeline = ({ exp }) => {
 }
 
 const TimelineWrapper = styled.section`
-@media (min-width: 768px) {
-  .timeline-info {
-    position:relative;
-  }
+padding-bottom: 10rem;
 
-  .timeline-info:before {
+  .timeline-container {
+    display:flex;
+    flex-direction: column;
+    padding: 2.4rem 0;
+    position: relative;
+  }
+  .timeline-container:after {
+    background-color: lightgray;
     content: '';
     position: absolute;
-    left: 50%;
-    height: 100%;
     width: 2px;
-    background: lightgray;
+    height: 100%;
+    left: calc(50% - 1px);
   }
-  .timeline-info ul li {
-    position: relative;
-    width: 50%;
-    padding: 1.8rem 2rem;
-  }
-  .timeline-info ul li:nth-child(even) {
-    text-align: right;
-  }
-}
 `;
 
 export default Timeline

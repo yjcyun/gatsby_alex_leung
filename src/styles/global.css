@@ -47,7 +47,6 @@ h2,
 h3,
 h4 {
   line-height: 1.25;
-  font-family: var(--ff-secondary);
 }
 h1 {
   font-size: 3rem;
