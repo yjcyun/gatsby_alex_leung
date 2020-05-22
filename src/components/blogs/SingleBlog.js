@@ -34,7 +34,6 @@ const BlogWrapper = styled.section`
     transition: var(--transition);
     margin-bottom: 2rem;
     text-align: center; 
-    position: relative;
   }
 
   .blog:hover h4{

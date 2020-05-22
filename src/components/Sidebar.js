@@ -5,7 +5,6 @@ import NavLinks from '../constants/links';
 import SocialLinks from '../constants/socialLinks';
 
 const Sidebar = ({ isOpen, toggleNavbar }) => {
-  console.log(isOpen);
   return (
     <SidebarWrapper>
       <aside className={`sidebar ${isOpen ? 'show-sidebar' : ''}`}>

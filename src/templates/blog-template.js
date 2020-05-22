@@ -7,7 +7,6 @@ import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 
 const BlogTemplate = ({ data }) => {
-  console.log(data);
   const { blog: { content } } = data;
 
   return (
@@ -17,7 +16,7 @@ const BlogTemplate = ({ data }) => {
           <article className="blog-content">
             <ReactMarkdown source={content} />
           </article>
-          <Link to="/blog" className="btn blog-btn">
+          <Link to="/blog" className="blog-btn">
             <FaLongArrowAltLeft className="blog-icon"/>
             <span>back to blog</span>
           </Link>
@@ -92,11 +91,15 @@ padding: 5rem 0;
     letter-spacing:0.1rem;
     font-size: 1.3rem;
     margin-top: 2rem;
-    color: white;
+    color: var(--clr-black);
+    box-shadow: 0 2px var(--clr-black);
+
   }
 
   .blog-btn:hover {
-    color: black;
+    color: rgba(233,33,99,1);
+    box-shadow: 0 2px rgba(233,33,99,1);
+
   }
 
   .blog-btn span{

@@ -34,6 +34,11 @@ h2{
 
     }
   }
+  @media screen and (min-width: 992px) {
+  .blogs-center {
+    width: 70vw;
+  }
+}
 `;
 
 export default Blogs
