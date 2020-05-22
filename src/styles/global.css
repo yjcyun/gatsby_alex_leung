@@ -127,6 +127,12 @@ h4 {
   color: var(--clr-blueGrey);
 }
 
+  @media (max-width: 548px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  }
+
 /* button */
 .btn {
   outline: 1px solid black;

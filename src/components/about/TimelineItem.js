@@ -28,12 +28,6 @@ const TimeItemWrapper = styled.div`
   width: 50%;
   position: relative;
 
-  @media (min-width: 768px) {
-    h2{
-       font-size: 2.5rem!important;
-    }
-  }
-
   h2 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -89,19 +83,35 @@ const TimeItemWrapper = styled.div`
   }
 
   &:nth-child(odd) .time{
-    width: 200px;
+    width: 145px;
     position: absolute;
     top: 6px;
-    left: -230px;
+    left: -175px;
     text-align: right;
   }
 
   &:nth-child(even) .time{
-    width: 200px;
+    width: 145px;
     position: absolute;
     top: 6px;
-    right: -230px;
+    right: -175px;
     text-align: left;
+  }
+
+    @media (min-width: 768px) {
+    h2{
+       font-size: 2.5rem;
+    }
+
+    &:nth-child(odd) .time {
+      width: 200px;
+      left: -230px;
+      }
+
+    &:nth-child(even) .time{
+      width: 200px;
+      right: -230px;
+    }
   }
 `;
 
