@@ -21,7 +21,8 @@ const Timeline = ({ exp }) => {
 }
 
 const TimelineWrapper = styled.section`
-padding: 10rem 0;
+padding-bottom: 10rem;
+margin-top: -1rem;
 background: hsl(210, 36%, 96%);
 
   .timeline-container {
