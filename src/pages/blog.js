@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from "../components/Layout";
 import Blogs from '../components/blogs/Blogs';
+import Footer from '../components/Footer';
 
 export const query = graphql`
   {
@@ -31,6 +32,7 @@ const blog = ({
   return (
     <Layout>
       <Blogs blogs={blogs} />
+      <Footer color="#fff"/>
     </Layout>
   )
 }

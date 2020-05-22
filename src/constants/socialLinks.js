@@ -1,20 +1,23 @@
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
+import { FaLinkedin, FaTwitterSquare, FaInstagramSquare, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const data = [
   {
     id: 1,
     icon: <FaLinkedin className="social-icon" />,
+    footer: <FaLinkedinIn />,
     url: 'https://www.linkedin.com'
   },
   {
     id: 2,
     icon: <FaTwitterSquare className="social-icon" />,
+    footer: <FaTwitter />,
     url: 'https://www.twitter.com'
   },
   {
     id: 3,
     icon: <FaInstagramSquare className="social-icon" />,
+    footer: <FaInstagram />,
     url: 'https://www.instagram.com'
   }
 ];
@@ -27,10 +30,18 @@ const links = data.map(link => (
   </li>
 ));
 
-export default ({ styleClass }) => {
+const footerLinks = data.map(link => (
+  <li key={link.id}>
+    <a href={link.url} className="social-link">
+      {link.footer}
+    </a>
+  </li>
+));
+
+export default ({ styleClass, footer }) => {
   return (
     <ul className={`social-links ${styleClass ? styleClass : ''}`}>
-      {links}
+      {footer ? footerLinks : links}
     </ul>
   )
 }

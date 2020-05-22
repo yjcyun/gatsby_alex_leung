@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from "../components/Layout";
 import Biograph from '../components/about/Biograph';
 import Timeline from '../components/about/Timeline';
+import Footer from '../components/Footer';
 
 export const query = graphql`
   {
@@ -44,6 +45,7 @@ const about = ({
     <Layout>
       <Biograph bio={bio} />
       <Timeline exp={exp} />
+      <Footer color="hsl(210, 36%, 96%)" />
     </Layout>
   )
 }

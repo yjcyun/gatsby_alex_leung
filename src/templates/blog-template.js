@@ -4,6 +4,7 @@ import { FaLongArrowAltLeft } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 
 const BlogTemplate = ({ data }) => {
   console.log(data);
@@ -22,6 +23,7 @@ const BlogTemplate = ({ data }) => {
           </Link>
         </div>
       </BlogTempWrapper>
+      <Footer color="#fff"/>
     </Layout>
   )
 }
