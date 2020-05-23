@@ -1,22 +1,19 @@
-import React, {useEffect} from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+
 import styled from 'styled-components';
 import SocialLinks from '../constants/socialLinks';
 
 const Hero = () => {
-  useEffect(()=>{
-    AOS.init({
-      duration:2000
-    })
-  })
+
   return (
     <HeroWrapper>
       <div className="section-center hero-center">
         <div className="hero-info">
-          <div data-aos="fade-up">
+          <div className="text-top">
             <h1>alex leung</h1>
             <h3>A software engineer at Square</h3>
+          </div>
+          <div className="text-bottom">
             <SocialLinks />
           </div>
         </div>
@@ -40,26 +37,68 @@ position: relative;
 }
 
 .hero-info h1 {
+  display:inline-block;
   font-weight: bold;
   font-family: var(--ff-primary);
   text-transform: uppercase;
   font-size: 4rem; 
   letter-spacing: 0.2rem; 
+  line-height: 0.9;
+}
+
+.text-top{
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  transform: translate(0, 100%);
+}
+
+.text-bottom{
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  transform: translate(0, -100%);
+}
+
+@keyframes showTopText {
+  0% { 
+    transform: translate3d(0, 100%, 0); opacity: 0 
+  }
+  100% { 
+    transform: translate3d(0, 0, 0);
+    opacity:1
+   }
+}
+@keyframes showBottomText {
+   0% { 
+    transform: translate3d(0, -100%, 0);
+    opacity: 0 
+  }
+  100% { 
+    transform: translate3d(0, 0, 0);
+    opacity:1
+   }
 }
 
 .hero-info h3 {
   max-width: 30rem;
   font-weight: 400;
 }
+
 @media (min-width: 768px) {
   .hero-info h1 {
     font-size: 8rem;
+    padding-bottom:1rem;
   }
   .social-links {
-    width: 12rem;
+    width: 17rem;
+    margin-top: 3rem;
+
   }
   .social-link {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 `;

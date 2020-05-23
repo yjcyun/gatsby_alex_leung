@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare, FaInstagramSquare, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaTwitterSquare, FaInstagramSquare, FaGithubSquare, FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const data = [
   {
@@ -19,6 +19,12 @@ const data = [
     icon: <FaInstagramSquare className="social-icon" />,
     footer: <FaInstagram />,
     url: 'https://www.instagram.com'
+  },
+  {
+    id: 4,
+    icon: <FaGithubSquare className="social-icon" />,
+    footer: <FaGithub />,
+    url: 'https://www.github.com'
   }
 ];
 

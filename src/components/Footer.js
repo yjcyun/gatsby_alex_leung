@@ -24,7 +24,7 @@ const FooterWrapper = styled.footer`
     margin: 0 auto;
   }
   p {
-    font-size:1rem;
+    font-size:0.9rem;
     padding-bottom: 2rem;
   }
   svg{
