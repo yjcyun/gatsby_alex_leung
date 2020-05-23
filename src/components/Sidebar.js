@@ -33,7 +33,7 @@ const SidebarWrapper = styled.div`
   place-items:center;
   opacity: 0 ;
   transition: var(--transition);
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 .show-sidebar {
   opacity:1;
@@ -94,19 +94,19 @@ Sidebar Animation
   animation: slideRight 0.5s ease-in-out 0.3s forwards;
 }
 .sidebar-links li:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 200ms;
 }
 .sidebar-links li:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 400ms;
 }
 .sidebar-links li:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 600ms;
 }
 
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(200px);
     opacity: 0;
   }
   100% {
@@ -119,14 +119,18 @@ Sidebar Animation
   animation: slideUp 0.5s ease-in-out 0.3s forwards;
 }
 .sidebar-icons li:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 150ms;
 }
 .sidebar-icons li:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 300ms;
 }
 .sidebar-icons li:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 450ms;
 }
+.sidebar-icons li:nth-of-type(4) {
+  animation-delay: 600ms;
+}
+
 @keyframes slideUp {
   0% {
     transform: translateY(200px);

@@ -3,9 +3,11 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 
 export default () => {
-  return(
+  return (
     <Layout className="home-page">
       <Hero />
+  
     </Layout>
   )
 }
+

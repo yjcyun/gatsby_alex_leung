@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const TimelineItem = ({ data }) => {
+const TimelineItem = ({ data, index }) => {
   const { position, desc, company, date } = data;
 
   useEffect(() => {
@@ -13,14 +13,16 @@ const TimelineItem = ({ data }) => {
   })
 
   return (
-    
+
     <TimeItemWrapper>
-      <div data-aos="zoom-in"className="timeline-item-content">
-        <h2>{position}</h2>
-        {desc.map(i => (
-          <p key={i.id}>{i.name}</p>
-        ))}
-        <div className="time">
+      <div className="timeline-item-content">
+        <div data-aos={`${index % 2 === 0 ? 'fade-left' : 'fade-right'}`}>
+          <h2>{position}</h2>
+          {desc.map(i => (
+            <p key={i.id}>{i.name}</p>
+          ))}
+        </div>
+        <div className="time" data-aos={`${index % 2 === 0 ? 'fade-right' : 'fade-left'}`}>
           <h4>{company}</h4>
           <span>{date}</span>
         </div>
@@ -95,7 +97,7 @@ const TimeItemWrapper = styled.div`
     width: 145px;
     position: absolute;
     top: 6px;
-    left: -205px;
+    left: -180px;
     text-align: right;
   }
 
@@ -103,7 +105,7 @@ const TimeItemWrapper = styled.div`
     width: 145px;
     position: absolute;
     top: 6px;
-    right: -205px;
+    right: -180px;
     text-align: left;
   }
 
@@ -114,12 +116,14 @@ const TimeItemWrapper = styled.div`
 
     &:nth-child(odd) .time {
       width: 200px;
-      left: -260px;
+      left: -240px;
+      top:8px;
       }
 
     &:nth-child(even) .time{
       width: 200px;
-      right: -260px;
+      right: -240px;
+      top:8px;
     }
   }
 `;

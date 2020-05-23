@@ -6,6 +6,7 @@ import SocialLinks from '../constants/socialLinks';
 const Hero = () => {
 
   return (
+  
     <HeroWrapper>
       <div className="section-center hero-center">
         <div className="hero-info">
@@ -18,7 +19,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </HeroWrapper>
+    </HeroWrapper>   
   )
 }
 
@@ -55,8 +56,8 @@ position: relative;
 }
 
 .text-bottom{
-  animation: showBottomText 0.5s;
-  animation-delay: 1.75s;
+  animation: showBottomText 1.3s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
   opacity:0;
   transform: translate(0, -100%);

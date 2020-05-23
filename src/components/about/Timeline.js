@@ -11,8 +11,8 @@ const Timeline = ({ exp }) => {
         </article>
 
         <article className="timeline-container">
-          {exp.map((item) => (
-            <TimelineItem data={item} key={item.id} />
+          {exp.map((item,index) => (
+            <TimelineItem data={item} index={index} key={item.id} />
           ))}
         </article>
       </div>

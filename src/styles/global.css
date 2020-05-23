@@ -149,20 +149,6 @@ h4 {
 
 /*
 ===============
-Pages
-===============
-*/
-.home-page,
-.blog-page,
-.error-page,
-.about-page,
-.blog-template {
-  min-height: calc(100vh - 80px);
-
-}
-
-/*
-===============
 navlinks
 ===============
 */
@@ -194,14 +180,4 @@ navlinks
     color: var(--clr-hover);
     box-shadow: 0 2px var(--clr-black);
   }
-}
-
-.layout {
-  position: relative;
-}
-
-.social-text {
-  position: fixed;
-  top: 0;
-  left: 0;
 }

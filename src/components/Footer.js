@@ -37,7 +37,18 @@ const FooterWrapper = styled.footer`
   }
   .footer-icons a {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer-icons {
+      width: 20rem;
+    }
+    
+    .footer-icons a {
+      color: white;
+      font-size: 3rem;
+    }
   }
 `;
 
