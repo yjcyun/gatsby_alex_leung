@@ -30,8 +30,10 @@ const blog = ({
 }) => {
   return (
     <Layout>
-      <Blogs blogs={blogs} />
-      <Footer color="#fff"/>
+      <section className="blog-page">
+        <Blogs blogs={blogs} />
+        <Footer color="#fff" />
+      </section>
     </Layout>
   )
 }

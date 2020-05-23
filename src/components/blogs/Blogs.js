@@ -17,6 +17,7 @@ const Blogs = ({ blogs }) => {
 
 const BlogsWrapper = styled.section`
 padding: 5rem 0;
+
 h2{
   text-align:center;
   margin-bottom:3rem;

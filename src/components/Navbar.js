@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import NavLinks from '../constants/links';
 
 const Navbar = ({ toggleNavbar }) => {
+
   return (
     <NavbarWrapper>
       <div className="nav-center">
@@ -70,7 +71,7 @@ const NavbarWrapper = styled.nav`
   }
 
   .logo{
-    font-family: 'Parisienne', cursive;    color: var(--clr-black);
+font-family: 'Parisienne', cursive;    color: var(--clr-black);
     font-size: 2rem;
   }
 

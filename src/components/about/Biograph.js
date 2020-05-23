@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
 const Biograph = (props) => {
   const { title, image, info } = props.bio[0];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    })
+  })
 
   return (
     <div>
@@ -20,7 +28,7 @@ const Biograph = (props) => {
             </div>
             <div>
               <h2 className="about-title subtitle">Biograph</h2>
-              <p className="about-info">{info}</p>
+              <p data-aos="fade-left" className="about-info">{info}</p>
             </div>
           </article>
         </div>

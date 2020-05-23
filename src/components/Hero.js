@@ -1,13 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styled from 'styled-components';
 import SocialLinks from '../constants/socialLinks';
 
 const Hero = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:2000
+    })
+  })
   return (
     <HeroWrapper>
       <div className="section-center hero-center">
         <div className="hero-info">
-          <div>
+          <div data-aos="fade-up">
             <h1>alex leung</h1>
             <h3>A software engineer at Square</h3>
             <SocialLinks />
