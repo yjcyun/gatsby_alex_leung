@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 
 const data = [
   {
@@ -22,7 +24,7 @@ const data = [
 const tempNavLinks = data.map(link => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <AniLink fade to={link.url}>{link.text}</AniLink>
     </li>
   );
 });

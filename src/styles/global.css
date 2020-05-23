@@ -35,7 +35,6 @@ body {
   color: var(--clr-black);
   line-height: 1.5;
   font-size: 0.875rem;
-  margin-top: 5rem;
 }
 ul {
   list-style-type: none;
@@ -92,6 +91,7 @@ h4 {
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
+  margin-top: 5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -107,6 +107,7 @@ h4 {
   display: flex;
   justify-content: space-between;
 }
+
 .social-link {
   font-size: 2.4rem;
   color: var(--clr-black);
@@ -151,12 +152,13 @@ h4 {
 Pages
 ===============
 */
+.home-page,
 .blog-page,
 .error-page,
 .about-page,
-.contact-page,
 .blog-template {
-  min-height: calc(100vh - 5rem - 9rem);
+  min-height: calc(100vh - 80px);
+
 }
 
 /*

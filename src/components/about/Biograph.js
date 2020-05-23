@@ -39,7 +39,7 @@ const Biograph = (props) => {
 }
 
 const AboutWrapper = styled.section`
-padding:3rem 0;
+padding:5rem 0;
   .about-img {
     margin: 0 auto;
     margin-bottom: 2rem;

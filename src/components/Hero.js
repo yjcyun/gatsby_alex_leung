@@ -23,9 +23,9 @@ const Hero = () => {
 }
 
 const HeroWrapper = styled.section`
-margin-top: -5rem;
-padding-top: 5rem;
-height: 100vh;
+/* margin-top: -5rem; */
+/* padding-top: 5rem; */
+height: calc(100vh - 80px);
 background: var(--clr-white);
 position: relative;
 
