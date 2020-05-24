@@ -50,7 +50,7 @@ const SidebarWrapper = styled.div`
   font-weight: bold;
   transition: var(--transition);
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
+  /* text-transform: capitalize; */
   letter-spacing: 0.1rem;
 }
 .sidebar-links li a:hover{

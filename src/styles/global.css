@@ -1,8 +1,9 @@
 /*=============== 
 Fonts
 ===============*/
-/* @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@400;700&family=Playfair+Display:wght@500&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+/* favicon from https://fonts.google.com/?category=Handwriting&preview.text=Alex+Leung&preview.text_type=custom */
 
 /*=============== 
 Variables
@@ -172,7 +173,6 @@ navlinks
     transition: var(--transition);
     padding: 0.5rem 0;
     font-size: 1.3rem;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
   }
 

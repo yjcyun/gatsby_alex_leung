@@ -71,8 +71,10 @@ const NavbarWrapper = styled.nav`
   }
 
   .logo{
-font-family: 'Parisienne', cursive;    color: var(--clr-black);
-    font-size: 2rem;
+    /* font-family: 'Parisienne', cursive;     */
+    font-family: 'Rock Salt', cursive;
+    color: var(--clr-black);
+    font-size: 1.5rem;
   }
 
   @media (min-width: 768px) {
