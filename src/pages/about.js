@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Biograph from '../components/about/Biograph';
 import Timeline from '../components/about/Timeline';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 export const query = graphql`
   {
@@ -43,6 +44,7 @@ const about = ({
 }) => {
   return (
     <Layout>
+      <SEO title="About" description="About Alex Leung" />
       <Biograph bio={bio} />
       <Timeline exp={exp} />
       <Footer color="hsl(210, 36%, 96%)" />

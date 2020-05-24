@@ -1,6 +1,20 @@
 
 module.exports = {
+  siteMetadata:{
+    title: "Alex Leung",
+    description: "A personal website of Alex Leung",
+    author: "@christinayun",
+    twitterUsername: "@acl1n4c",
+    image: "/twitter.png",
+    siteUrl: "https://alex-leung-netlify.netlify.app"
+  },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,9 +50,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-transition-link`
   ],
 }

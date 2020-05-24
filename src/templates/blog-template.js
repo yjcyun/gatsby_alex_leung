@@ -5,24 +5,26 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const BlogTemplate = ({ data }) => {
-  const { blog: { content } } = data;
+  const { blog: { content,title } } = data;
 
   return (
     <Layout>
+      <SEO title={title}/>
       <BlogTempWrapper>
         <div className="section-center blog-temp-center">
           <article className="blog-content">
             <ReactMarkdown source={content} />
           </article>
           <Link to="/blog" className="blog-btn">
-            <FaLongArrowAltLeft className="blog-icon"/>
+            <FaLongArrowAltLeft className="blog-icon" />
             <span>back to blog</span>
           </Link>
         </div>
       </BlogTempWrapper>
-      <Footer color="#fff"/>
+      <Footer color="#fff" />
     </Layout>
   )
 }
@@ -31,6 +33,7 @@ export const query = graphql`
   query GetSingleBlog($slug: String) {
     blog: strapiBlogs(slug: {eq: $slug}){
       content
+      title
     }
   }
 `;
