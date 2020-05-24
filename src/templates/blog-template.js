@@ -2,17 +2,19 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
+import ScrollUpButton from 'react-scroll-up-button';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const BlogTemplate = ({ data }) => {
-  const { blog: { content,title } } = data;
+  const { blog: { content, title } } = data;
 
   return (
     <Layout>
-      <SEO title={title}/>
+      <SEO title={title} />
+      <ScrollUpButton ContainerClassName="ScrollUpButton__Container" />
       <BlogTempWrapper>
         <div className="section-center blog-temp-center">
           <article className="blog-content">

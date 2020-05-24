@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import ScrollUpButton from 'react-scroll-up-button';
 import Layout from "../components/Layout";
 import Blogs from '../components/blogs/Blogs';
 import Footer from '../components/Footer';
@@ -30,6 +31,7 @@ const blog = ({
 }) => {
   return (
     <Layout>
+      <ScrollUpButton ContainerClassName="ScrollUpButton__Container" />
       <section className="blog-page">
         <Blogs blogs={blogs} />
         <Footer color="#fff" />
