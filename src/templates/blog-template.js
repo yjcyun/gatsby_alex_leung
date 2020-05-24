@@ -87,27 +87,6 @@ padding: 5rem 0;
   .blog-content {
     margin-bottom:2.5rem;
   }
-
-  .blog-btn {
-    color: black;
-    text-transform:uppercase;
-    letter-spacing:0.1rem;
-    font-size: 1.3rem;
-    margin-top: 2rem;
-    color: var(--clr-black);
-    box-shadow: 0 2px var(--clr-black);
-
-  }
-
-  .blog-btn:hover {
-    color: rgba(233,33,99,1);
-    box-shadow: 0 2px rgba(233,33,99,1);
-
-  }
-
-  .blog-btn span{
-    margin-left: 1rem;
-  }
 `;
 
 export default BlogTemplate

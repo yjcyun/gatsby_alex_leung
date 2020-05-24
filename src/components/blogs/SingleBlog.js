@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const SingleBlog = ({ title, id, image, date, category, slug }) => {
   return (
     <BlogWrapper>
-      <Link to={`blogs/${slug}`} key={id} className="blog">
+      <Link to={`/blogs/${slug}`} key={id} className="blog">
         <article>
           <Image fluid={image.childImageSharp.fluid} className="blog-img" alt="blog" />
           <div className="blog-card">
