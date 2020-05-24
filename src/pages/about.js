@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby';
+import ScrollUpButton from 'react-scroll-up-button';
 import Layout from "../components/Layout";
 import Biograph from '../components/about/Biograph';
 import Timeline from '../components/about/Timeline';
@@ -45,11 +46,13 @@ const about = ({
   return (
     <Layout>
       <SEO title="About" description="About Alex Leung" />
+      <ScrollUpButton ContainerClassName="ScrollUpButton__Container"/>
       <Biograph bio={bio} />
       <Timeline exp={exp} />
       <Footer color="hsl(210, 36%, 96%)" />
     </Layout>
   )
 }
+
 
 export default about

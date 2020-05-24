@@ -201,3 +201,10 @@ navlinks
   .blog-btn span{
     margin-left: 1rem;
   }
+
+  /* scroll button */
+  @media screen and (max-width: 992px) {
+    .ScrollUpButton__Container {
+      display:none!important;
+    }
+  }
