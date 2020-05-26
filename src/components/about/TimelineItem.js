@@ -16,20 +16,39 @@ const TimelineItem = ({ data, index }) => {
 
     <TimeItemWrapper>
       <div className="timeline-item-content">
-        <div data-aos={`${index % 2 === 0 ? 'fade-left' : 'fade-right'}`}>
+        {/* desktop view */}
+        <div data-aos={`${index % 2 === 0 ? 'fade-left' : 'fade-right'}`} className="desktop">
           <h2>{position}</h2>
-        </div>
-
-        <div className="time" data-aos={`${index % 2 === 0 ? 'fade-right' : 'fade-left'}`}>
-          <h4>{company}</h4>
-          <span className="date">{date}</span>
-        </div>
-
-        <div data-aos={`${index % 2 === 0 ? 'fade-left' : 'fade-right'}`}>
           {desc.map(i => (
             <p key={i.id}>{i.name}</p>
           ))}
         </div>
+
+        <div className="time desktop" data-aos={`${index % 2 === 0 ? 'fade-right' : 'fade-left'}`} >
+          <h4>{company}</h4>
+          <span className="date">{date}</span>
+        </div>
+      
+        {/* end of desktop view */}
+
+        {/* mobile view */}
+        <div data-aos='fade-left' className="mobile">
+          <h2>{position}</h2>
+
+        </div>
+
+        <div className="time mobile" data-aos="fade-left">
+          <h4>{company}</h4>
+          <span className="date">{date}</span>
+        </div>
+
+        <div className="time mobile" data-aos="fade-left">
+          {desc.map(i => (
+            <p key={i.id}>{i.name}</p>
+          ))}
+        </div>
+        {/* end of mobile view */}
+
       </div>
     </TimeItemWrapper>
   )
@@ -71,8 +90,13 @@ const TimeItemWrapper = styled.div`
     padding-top: 1rem;
   } 
 
+  .desktop {
+    display: none;
+  }
+  
+
   @media (min-width: 768px) {
-     width: 50%;
+    width: 50%;
     align-self:flex-start;
     justify-content:flex-end;
     padding-right: 2rem;
@@ -134,7 +158,7 @@ const TimeItemWrapper = styled.div`
       right: -230px;
       top:8px;
     }
-    
+
     h2 {
       font-size: 2.5rem;
     }
@@ -142,7 +166,16 @@ const TimeItemWrapper = styled.div`
     p {
     padding-top: 0rem;
     } 
-  }
+
+    .mobile{
+    display: none;
+    }
+    
+    .desktop {
+      display: flex;
+      flex-direction:column;
+    }
+  } 
 `;
 
 export default TimelineItem
